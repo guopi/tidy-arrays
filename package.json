@@ -1,0 +1,20 @@
+{
+    "name": "tidy-arrays",
+    "description": "array extension functions",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "files": [
+        "index.ts",
+        "dist/"
+    ],
+    "repository": "git@github.com:guopi/tidy-arrays.git",
+    "author": "guopi.pro@gmail.com",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "^4.5.3"
+    }
+}
