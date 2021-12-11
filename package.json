@@ -1,7 +1,7 @@
 {
     "name": "tidy-arrays",
     "description": "array extension functions",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/index.js",
     "files": [
         "index.ts",
@@ -12,7 +12,8 @@
     "license": "MIT",
     "private": false,
     "scripts": {
-        "build": "tsc"
+        "build": "tsc",
+        "pub": "tsc && yarn publish"
     },
     "devDependencies": {
         "typescript": "^4.5.3"
