@@ -11,6 +11,7 @@
             "DOM"
         ],
         "declaration": true,
+        "downlevelIteration": true,
         "outDir": "dist",
         "strict": true,
         "esModuleInterop": true
