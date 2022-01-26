@@ -1,8 +1,17 @@
 {
     "name": "tidy-arrays",
     "description": "array extension functions",
-    "version": "1.0.2",
-    "main": "dist/index.js",
+    "version": "1.0.7",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
     "files": [
         "index.ts",
         "dist/"
@@ -10,12 +19,12 @@
     "repository": "git@github.com:guopi/tidy-arrays.git",
     "author": "guopi.pro@gmail.com",
     "license": "MIT",
-    "private": false,
     "scripts": {
-        "build": "tsc",
-        "pub": "tsc && yarn publish"
+        "build": "tsup index.ts --format cjs,esm --dts --clean",
+        "pub": "yarn build && npm publish"
     },
     "devDependencies": {
-        "typescript": "^4.5.3"
+        "tsup": "^5.11.11",
+        "typescript": "^4.5.5"
     }
 }

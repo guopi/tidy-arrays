@@ -572,12 +572,10 @@ export function compareAny(a: any, b: any): number {
                 return undefined
             }
             let max = selector(this[0], 0, this)
-            let maxIndex = 0
             for (let i = 1; i < length; i++) {
                 const r = selector(this[i], i, this)
                 if (r > max) {
                     max = r
-                    maxIndex = i
                 }
             }
             return max
@@ -594,12 +592,10 @@ export function compareAny(a: any, b: any): number {
                 return undefined
             }
             let min = selector(this[0], 0, this)
-            let minIndex = 0
             for (let i = 1; i < length; i++) {
                 const key = selector(this[i], i, this)
                 if (key < min) {
                     min = key
-                    minIndex = i
                 }
             }
             return min
@@ -613,7 +609,7 @@ export function compareAny(a: any, b: any): number {
         ): DictOf<R> {
             const ret: DictOf<R> = {}
             const length = this.length
-            for (let i = 1; i < length; i++) {
+            for (let i = 0; i < length; i++) {
                 const [key, v] = mapper(this[i], i, this)
                 ret[key] = v
             }
@@ -628,7 +624,7 @@ export function compareAny(a: any, b: any): number {
         ): Set<R> {
             const ret = new Set<R>()
             const length = this.length
-            for (let i = 1; i < length; i++) {
+            for (let i = 0; i < length; i++) {
                 const r = mapper(this[i], i, this)
                 ret.add(r)
             }
@@ -643,7 +639,7 @@ export function compareAny(a: any, b: any): number {
         ): Map<K, V> {
             const ret = new Map<K, V>()
             const length = this.length
-            for (let i = 1; i < length; i++) {
+            for (let i = 0; i < length; i++) {
                 const [key, v] = mapper(this[i], i, this)
                 ret.set(key, v)
             }
