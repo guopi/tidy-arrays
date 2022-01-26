@@ -1,7 +1,7 @@
 {
     "name": "tidy-arrays",
     "description": "array extension functions",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
